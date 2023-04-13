@@ -5,8 +5,6 @@ const Videocard = ({ info }) => {
   const { snippet, statistics } = info;
   const { channelTitle, title, thumbnails } = snippet;
 
-  console.log(info);
-
   const titleLimit = title.substring(0, 70);
 
   const setTitle = titleLimit.length >= 70 ? titleLimit + "..." : titleLimit;
@@ -21,7 +19,7 @@ const Videocard = ({ info }) => {
         />
       </div>
 
-      <div className="mx-3 py-2">
+      <div className="mx-3 py-4">
         <ul className="">
           <li className="font-medium text-[17px] line-clamp-2">{setTitle}</li>
           <li className="text-sm font-medium py-1 text-gray-500">
