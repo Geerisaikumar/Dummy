@@ -1,7 +1,8 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import Videocard from "./Videocard";
 import { WATCH_VIDEOS_URL, YOUTUBE_VIDEOS_API_URL } from "../utils/Constant";
 import { Link } from "react-router-dom";
+
 // import { useSelector } from "react-redux";
 
 // const toggleMenu = useSelector((store) => store.app);
@@ -9,8 +10,6 @@ import { Link } from "react-router-dom";
 const Videocontainer = () => {
   const [videos, setVideos] = useState([]);
 
-  const contextUser = useContext(videos);
-  console.log(contextUser);
   useEffect(() => {
     GetVideos();
   }, []);
@@ -19,7 +18,7 @@ const Videocontainer = () => {
     const data = await fetch(YOUTUBE_VIDEOS_API_URL);
     const json = await data.json();
     setVideos(json.items);
-    console.log(json.items);
+    // console.log(json.items);
   };
 
   return (

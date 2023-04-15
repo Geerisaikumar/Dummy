@@ -2,6 +2,7 @@ import React from "react";
 import { numify } from "numify";
 
 const Videocard = ({ info }) => {
+  // console.log(info);
   const { snippet, statistics } = info;
   const { channelTitle, title, thumbnails } = snippet;
 
@@ -27,6 +28,7 @@ const Videocard = ({ info }) => {
           </li>
           <li className="text-[15px] font-normal text-gray-500">
             {numify(statistics.viewCount)} views
+            {/* <span className="px-1">{snippet.publishedAt}</span> */}
           </li>
         </ul>
       </div>

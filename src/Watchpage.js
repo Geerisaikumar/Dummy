@@ -3,8 +3,7 @@ import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import { MenuOpen } from "./utils/appSlice";
 import { WATCH_VIDEOS_URL } from "./utils/Constant";
-import Comments from "./components/Comments";
-import Watchpagedetails from "./Watchpagedetails";
+import CommentsBox from "./components/CommentsBox";
 
 const Watchpage = () => {
   const dispatch = useDispatch();
@@ -24,18 +23,19 @@ const Watchpage = () => {
   };
 
   return (
-    <div>
+    <div className="mt-8">
       <iframe
         className="mx-10 "
-        width="770"
-        height="415"
+        width="950"
+        height="515"
         src={"https://www.youtube.com/embed/" + searchParams.get("v")}
         title="YouTube video player"
-        allow="accelerometer; autoPlay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
       ></iframe>
-      <Watchpagedetails details={watchPageData} />
-      <Comments />
+      <div>
+        <CommentsBox />
+      </div>
     </div>
   );
 };
