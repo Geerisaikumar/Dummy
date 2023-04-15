@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Videocard from "./Videocard";
-import { YOUTUBE_VIDEOS_API_URL } from "../utils/Constant";
+import { WATCH_VIDEOS_URL, YOUTUBE_VIDEOS_API_URL } from "../utils/Constant";
 import { Link } from "react-router-dom";
 // import { useSelector } from "react-redux";
 
@@ -8,6 +8,9 @@ import { Link } from "react-router-dom";
 
 const Videocontainer = () => {
   const [videos, setVideos] = useState([]);
+
+  const contextUser = useContext(videos);
+  console.log(contextUser);
   useEffect(() => {
     GetVideos();
   }, []);
@@ -16,10 +19,15 @@ const Videocontainer = () => {
     const data = await fetch(YOUTUBE_VIDEOS_API_URL);
     const json = await data.json();
     setVideos(json.items);
+    console.log(json.items);
   };
 
   return (
-    <div className="flex flex-wrap justify-center h-[calx(100vh-7rem)] bg-green-400 pt-4">
+    <div
+      className="flex flex-wrap justify-center h-[calx(100vh-7rem)] bg-white
+     `
+      pt-4"
+    >
       {videos.map((video) => (
         <Link className="" to={"/watch?v=" + video.id} key={video.id}>
           <Videocard info={video} />

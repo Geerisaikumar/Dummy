@@ -19,14 +19,14 @@ const Videocard = ({ info }) => {
         />
       </div>
 
-      <div className="mx-3 py-4">
+      <div className="mx-3 py-4 font-PoppinsFont">
         <ul className="">
           <li className="font-medium text-[17px] line-clamp-2">{setTitle}</li>
           <li className="text-sm font-medium py-1 text-gray-500">
             {channelTitle}
           </li>
           <li className="text-[15px] font-normal text-gray-500">
-            {numify(statistics.viewCount)} views{" "}
+            {numify(statistics.viewCount)} views
           </li>
         </ul>
       </div>
