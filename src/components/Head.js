@@ -54,7 +54,7 @@ const Head = () => {
     dispatch(toggleMenu());
   };
   return (
-    <header className="grid grid-flow-col font-PoppinsFont justify-between px-5 py-2 w-full h-[4rem] bg-white sticky top-0 z-50">
+    <header className="grid grid-flow-col font-PoppinsFont justify-between px-5 w-full h-[4rem] bg-white sticky top-0 z-50">
       {/* ------------ HUmburger Menu Youtube logo ------------ */}
 
       <div className=" col-span-1 flex items-center h-[3.2rem] relative">
@@ -71,9 +71,9 @@ const Head = () => {
 
       {/* ------------- Input Part ------------------ */}
 
-      <div className=" col-span-10 flex items-center justify-center relative h-full ">
+      <div className=" col-span-10 flex items-center justify-center relative ">
         <div
-          className={`py-[12px] px-5 bg-white rounded-l-full border border-r-0 focus:border border-blue-600 ${
+          className={`py-[7px] px-4 bg-white rounded-l-full border border-r-0 focus:border border-blue-600 ${
             showSuggestions ? "visible" : "invisible"
           }`}
         >
@@ -83,7 +83,7 @@ const Head = () => {
         <div className="flex items-center relative">
           <div className="flex relative">
             <input
-              className={`w-[37rem] border border-gray-300 text-[17px] py-[10px] focus:outline-none focus:border-blue-600 ${
+              className={`w-[32rem] h-full border border-gray-300 text-[17px] py-[5px] focus:outline-none focus:border-blue-600 ${
                 showSuggestions
                   ? "focus:border-l-0 px-0"
                   : "rounded-l-full px-5"
@@ -97,7 +97,7 @@ const Head = () => {
             />
 
             <button className="relative border border-gray-300 border-l-0 bg-gray-50  hover:bg-gray-100 px-6 rounded-r-full ">
-              <AiOutlineSearch size={26} />
+              <AiOutlineSearch size={22} />
             </button>
           </div>
 
@@ -106,25 +106,25 @@ const Head = () => {
           {/* {searchQuery && (
             <AiOutlineClose
               size={24}
-              className="relative right-[6.8rem] hover:bg-red-500"
+              className="relative right-[6.8rem]  hover:bg-red-500"
               onClick={() => setSearchQuery(" ")}
             />
           )} */}
         </div>
 
         <span className="mx-3 hover:bg-gray-200 active:bg-gray-300 p-3 rounded-full cursor-pointer">
-          {<BsMic size={22} />}
+          {<BsMic size={20} />}
         </span>
 
         {/* ----------------- Suggestions Part ------------------------ */}
 
         {showSuggestions && (
-          <div className="absolute left-[9.4rem] bottom-0 ">
-            <ul className="bg-white pt-[15px] w-[41rem] absolute rounded-lg">
+          <div className="absolute left-[7.1rem] bottom-0">
+            <ul className="bg-white pt-[15px] w-[35.6rem] absolute rounded-lg">
               {suggestions.map((s) => (
                 <li
                   key={s}
-                  className="hover:bg-gray-100 text-[17px]  hover:w-full px-[22px] py-[6px]  flex items-center"
+                  className="hover:bg-gray-100 text-[17px]  hover:w-full px-[22px] py-[5px]  flex items-center"
                 >
                   <span className="mr-4 ">
                     <CiSearch size={22} />
@@ -141,10 +141,10 @@ const Head = () => {
 
       <div className="col-span-1 flex items-center ">
         <span className=" hover:bg-gray-200 active:bg-gray-300 p-3 rounded-full cursor-pointer">
-          <BsCameraVideo size={22} />
+          <BsCameraVideo size={20} />
         </span>
         <span className="mx-[6px] hover:bg-gray-200 active:bg-gray-300 p-3 rounded-full cursor-pointer">
-          <IoMdNotificationsOutline size={22} />
+          <IoMdNotificationsOutline size={20} />
         </span>
         <img
           className="h-10 w-[38px] rounded-full cursor-pointer"

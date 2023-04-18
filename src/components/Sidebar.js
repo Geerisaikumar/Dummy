@@ -1,6 +1,11 @@
 import React from "react";
-import { AiOutlineHome, AiOutlineLike, AiOutlineYoutube } from "react-icons/ai";
-import { BsFire, BsTrophy, BsMusicNote } from "react-icons/bs";
+import {
+  AiOutlineFire,
+  AiOutlineHome,
+  AiOutlineLike,
+  AiOutlineYoutube,
+} from "react-icons/ai";
+import { BsTrophy, BsMusicNote } from "react-icons/bs";
 import { BiMoviePlay } from "react-icons/bi";
 import { CiStreamOn } from "react-icons/ci";
 import { RiGamepadLine } from "react-icons/ri";
@@ -14,7 +19,7 @@ import {
   MdOutlineVideoLibrary,
   MdHistory,
   MdOutlineFeedback,
-  MdDryCleaning,
+  MdOutlineDryCleaning,
   MdOutlineWatchLater,
 } from "react-icons/md";
 import { useSelector } from "react-redux";
@@ -24,28 +29,28 @@ const Sidebar = () => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
 
   return !isMenuOpen ? null : (
-    <aside className="text-[17px] w-[19rem] h-[calc(100vh-4rem)] font-normal bg-white pt-2 px-3 sticky top-[4rem] overflow-y-hidden hover:overflow-y-scroll hover:scrollbar scroll-smooth">
+    <aside className="text-[15px] w-[19rem] h-[calc(100vh-4rem)] font-normal bg-white pt-2 px-3 sticky top-[4rem] overflow-y-hidden hover:overflow-y-scroll hover:scrollbar scroll-smooth">
       <div>
         <ul className="flex flex-col">
           <Link className="" to="/">
-            <li className="flex px-4 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 ">
+            <li className="flex px-3 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 ">
               <span className="mr-6 ">
-                <AiOutlineHome size={24} className="" />
+                <AiOutlineHome size={23} className="" />
               </span>
               Home
             </li>
           </Link>
 
-          <li className="flex px-4 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black h-full">
+          <li className="flex px-3 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black h-full">
             <span className="mr-6 ">
-              <AiOutlineYoutube size={24} />
+              <AiOutlineYoutube size={23} />
             </span>
             Shorts
           </li>
 
-          <li className="flex px-4 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
+          <li className="flex px-3 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
             <span className="mr-6">
-              <MdOutlineSubscriptions size={24} />
+              <MdOutlineSubscriptions size={23} />
             </span>
             Subscription
           </li>
@@ -55,30 +60,30 @@ const Sidebar = () => {
       </div>
       <div>
         <ul className="flex flex-col">
-          <li className="flex px-4 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
+          <li className="flex px-3 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
             <span className="mr-6">
-              <MdOutlineVideoLibrary size={24} />
+              <MdOutlineVideoLibrary size={23} />
             </span>
             Library
           </li>
 
-          <li className="flex px-4 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black ">
+          <li className="flex px-3 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black ">
             <span className="mr-6">
-              <MdHistory size={24} />
+              <MdHistory size={23} />
             </span>
             History
           </li>
 
-          <li className="flex px-4 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
+          <li className="flex px-3 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
             <span className="mr-6">
-              <MdOutlineWatchLater size={24} />
+              <MdOutlineWatchLater size={23} />
             </span>
             Watch later
           </li>
 
-          <li className="flex px-4 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
+          <li className="flex px-3 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
             <span className="mr-6">
-              <AiOutlineLike size={24} />
+              <AiOutlineLike size={23} />
             </span>
             Liked videos
           </li>
@@ -89,72 +94,72 @@ const Sidebar = () => {
       <div>
         <h1 className="text-[17px] px-2 font-medium py-1">Explore</h1>
         <ul className="flex flex-col">
-          <li className="flex px-4 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
+          <li className="flex px-3 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
             <span className="mr-6">
-              <BsFire size={24} />
+              <AiOutlineFire size={23} />
             </span>
             Trending
           </li>
 
-          <li className="flex px-4 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black ">
+          <li className="flex px-3 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black ">
             <span className="mr-6">
-              <MdOutlineShoppingBag size={24} />
+              <MdOutlineShoppingBag size={23} />
             </span>
             Shopping
           </li>
 
-          <li className="flex px-4 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
+          <li className="flex px-3 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
             <span className="mr-6">
-              <BsMusicNote size={24} />
+              <BsMusicNote size={23} />
             </span>
             Music
           </li>
 
-          <li className="flex px-4 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
+          <li className="flex px-3 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
             <span className="mr-6">
-              <BiMoviePlay size={24} />
+              <BiMoviePlay size={23} />
             </span>
             Movies
           </li>
 
-          <li className="flex px-4 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
+          <li className="flex px-3 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
             <span className="mr-6">
-              <CiStreamOn size={24} />
+              <CiStreamOn size={23} />
             </span>
             Live
           </li>
 
-          <li className="flex px-4 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
+          <li className="flex px-3 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
             <span className="mr-6">
-              <RiGamepadLine size={24} />
+              <RiGamepadLine size={23} />
             </span>
             Gaming
           </li>
 
-          <li className="flex px-4 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
+          <li className="flex px-3 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
             <span className="mr-6">
-              <IoNewspaperOutline size={24} />
+              <IoNewspaperOutline size={23} />
             </span>
             News
           </li>
 
-          <li className="flex px-4 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
+          <li className="flex px-3 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
             <span className="mr-6">
-              <BsTrophy size={24} />
+              <BsTrophy size={23} />
             </span>
             Sports
           </li>
 
-          <li className="flex px-4 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
+          <li className="flex px-3 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
             <span className="mr-6">
-              <GiBlackBook size={24} />
+              <GiBlackBook size={23} />
             </span>
             Learning
           </li>
 
-          <li className="flex px-4 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
+          <li className="flex px-3 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
             <span className="mr-6">
-              <MdDryCleaning size={24} />
+              <MdOutlineDryCleaning size={23} />
             </span>
             Fashion & Beauty
           </li>
@@ -164,30 +169,30 @@ const Sidebar = () => {
 
       <div>
         <ul className="flex flex-col">
-          <li className="flex px-4 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
+          <li className="flex px-3 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
             <span className="mr-6">
-              <IoSettingsOutline size={24} />
+              <IoSettingsOutline size={23} />
             </span>
             Settings
           </li>
 
-          <li className="flex px-4 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black ">
+          <li className="flex px-3 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black ">
             <span className="mr-6">
-              <TbReport size={24} />
+              <TbReport size={23} />
             </span>
             Report history
           </li>
 
-          <li className="flex px-4 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
+          <li className="flex px-3 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
             <span className="mr-6">
-              <IoMdHelpCircleOutline size={24} />
+              <IoMdHelpCircleOutline size={23} />
             </span>
             Help
           </li>
 
-          <li className="flex px-4 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
+          <li className="flex px-3 py-[10px] rounded-lg cursor-pointer hover:bg-gray-100 hover:text-black">
             <span className="mr-6">
-              <MdOutlineFeedback size={24} />
+              <MdOutlineFeedback size={23} />
             </span>
             Send feedback
           </li>

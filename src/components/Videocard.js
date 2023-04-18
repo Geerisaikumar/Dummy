@@ -11,8 +11,8 @@ const Videocard = ({ info }) => {
   const setTitle = titleLimit.length >= 70 ? titleLimit + "..." : titleLimit;
 
   return (
-    <div className="mx-2 w-[24.4rem] h-[22rem] aspect-video">
-      <div className="h-[13.5rem]  ">
+    <div className="mx-2 w-[21.5rem] h-[21rem] aspect-video">
+      <div className="h-[12rem]  ">
         <img
           className="min-w-full rounded-lg hover:rounded-none"
           alt="video"
