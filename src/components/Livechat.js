@@ -20,7 +20,7 @@ const Livechat = () => {
           messages: GenerateComments(15),
         })
       );
-    }, 5000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);

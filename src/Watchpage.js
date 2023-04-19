@@ -38,7 +38,7 @@ const Watchpage = () => {
             allowFullScreen
           ></iframe>
         </div>
-        <div className="mx-5 border rounded-lg border-black w-full bg-gray-100">
+        <div className="mx-5 border rounded-lg border-gray-300 w-full bg-gray-100">
           <Livechat />
         </div>
       </div>

@@ -11,3 +11,15 @@ export const YOUTUBE_SEARCH_API_URL =
   "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
 
 export const LIVE_CHAT_COUNT = 15;
+
+export const YOUTUBE_CHANNELS_API_URL =
+  "https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&managedByMe=true&onBehalfOfContentOwner=YOUR_CONTENT_OWNER_ID&key=" +
+  API_KEY;
+
+export const YOUTUBE_USERS_CHANNELS_API_URL =
+  "https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&forUsername=GoogleDevelopers&key=" +
+  API_KEY;
+
+export const YOUTUBE_CHANNELS_BYID_API_URL =
+  "https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UC_x5XG1OV2P6uZZ5FSM9Ttw&key=" +
+  API_KEY;

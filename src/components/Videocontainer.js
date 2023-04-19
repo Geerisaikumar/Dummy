@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Videocard from "./Videocard";
 import { WATCH_VIDEOS_URL, YOUTUBE_VIDEOS_API_URL } from "../utils/Constant";
 import { Link } from "react-router-dom";
+import Shimmer from "./Shimmer";
 
 // import { useSelector } from "react-redux";
 
@@ -21,12 +22,10 @@ const Videocontainer = () => {
     // console.log(json.items);
   };
 
-  return (
-    <div
-      className="flex flex-wrap justify-center h-[calx(100vh-7rem)] bg-white
-     `
-      pt-4"
-    >
+  return videos.length === 0 ? (
+    <Shimmer />
+  ) : (
+    <div className="flex flex-wrap justify-center h-[calx(100vh-7rem)] bg-white pt-4">
       {videos.map((video) => (
         <Link className="" to={"/watch?v=" + video.id} key={video.id}>
           <Videocard info={video} />

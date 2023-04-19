@@ -20,7 +20,7 @@ let buttonName = [
 
 const Buttonlist = () => {
   return (
-    <div className="flex items-center h-14 rounded sticky top-[4rem] bg-white pl-3 ">
+    <div className="flex items-center h-14 rounded sticky top-[3.5rem] bg-white pl-3 ">
       {buttonName.map((name, indx) => (
         <Button key={indx} name={name} />
       ))}
