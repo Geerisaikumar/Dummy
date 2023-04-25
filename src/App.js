@@ -6,6 +6,13 @@ import store from "./utils/store";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Maincontainer from "./components/Maincontainer";
 import Watchpage from "./Watchpage";
+import TimeAgo from "javascript-time-ago";
+
+import en from "javascript-time-ago/locale/en.json";
+import ru from "javascript-time-ago/locale/ru.json";
+
+TimeAgo.addDefaultLocale(en);
+TimeAgo.addLocale(ru);
 
 const appRouter = createBrowserRouter([
   {
@@ -42,7 +49,6 @@ function App() {
             <videocard/>
 
       */}
-      
       </div>
     </Provider>
   );
