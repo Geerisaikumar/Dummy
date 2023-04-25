@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Videocard from "./Videocard";
-import { WATCH_VIDEOS_URL, YOUTUBE_VIDEOS_API_URL } from "../utils/Constant";
+import { YOUTUBE_VIDEOS_API_URL } from "../utils/Constant";
 import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer";
 

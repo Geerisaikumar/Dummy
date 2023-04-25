@@ -9,7 +9,7 @@ const Chatmessages = ({ name, messages }) => {
         src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG-Clipart.png"
       />
       <div className="text-[14px] w-full">
-        <span className="text-gray-400 font-PoppinsFont font-medium px-2 ">
+        <span className="text-gray-400 font-RobotoFont font-medium px-2 ">
           {name}
         </span>
         <span className="">{messages}</span>

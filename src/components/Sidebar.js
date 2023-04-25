@@ -29,7 +29,7 @@ const Sidebar = () => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
 
   return !isMenuOpen ? null : (
-    <aside className="text-[15px] w-[19rem] h-[calc(100vh-4rem)] font-PoppinsFont bg-white pt-2 px-3 sticky top-[3.5rem] overflow-y-hidden hover:overflow-y-scroll hover:scrollbar scroll-smooth">
+    <aside className="text-[15px] w-[19rem] h-[calc(100vh-4rem)] font-RobotoFont bg-white pt-2 px-3 sticky top-[3.5rem] overflow-y-hidden hover:overflow-y-scroll hover:scrollbar scroll-smooth">
       <div>
         <ul className="flex flex-col">
           <Link className="" to="/">

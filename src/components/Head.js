@@ -54,7 +54,7 @@ const Head = () => {
     dispatch(toggleMenu());
   };
   return (
-    <header className="grid grid-flow-col font-PoppinsFont justify-between px-5 w-full h-[3.5rem] bg-white sticky top-0 z-50">
+    <header className="grid grid-flow-col font-RobotoFont justify-between pl-3 pr-5 w-full h-[3.5rem] bg-white sticky top-0 z-50">
       {/* ------------ HUmburger Menu Youtube logo ------------ */}
 
       <div className=" col-span-1 flex items-center h-[3.2rem] relative">
@@ -83,7 +83,7 @@ const Head = () => {
         <div className="flex items-center relative">
           <div className="flex relative">
             <input
-              className={`w-[32rem] h-full border border-gray-300 text-[17px] py-[6px] focus:outline-none focus:border-blue-600 ${
+              className={`w-[32rem] h-full border border-gray-300 text-[17px] py-[9px] focus:outline-none focus:border-blue-600 ${
                 showSuggestions
                   ? "focus:border-l-0 px-0"
                   : "rounded-l-full px-5"
@@ -119,8 +119,8 @@ const Head = () => {
         {/* ----------------- Suggestions Part ------------------------ */}
 
         {showSuggestions && (
-          <div className="absolute left-[7.8rem] mt-[4rem]">
-            <ul className="bg-red-400  w-[35.6rem] absolute rounded-lg">
+          <div className="absolute left-[8rem] mt-[4.5rem] ">
+            <ul className="bg-white  w-[35.6rem] absolute rounded-lg mt-">
               {suggestions.map((s) => (
                 <li
                   key={s}
